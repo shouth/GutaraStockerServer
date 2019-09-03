@@ -14,7 +14,7 @@ object Server extends App with ComponentRegistry {
   println(s"Using port number $port")
 
   DBs.setupAll()
-  Http().bindAndHandle(route, "localhost", port)
+  Http().bindAndHandle(route, "0.0.0.0", port)
 
   DB autoCommit { implicit session =>
     sql"""
