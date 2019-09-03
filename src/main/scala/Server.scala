@@ -67,5 +67,4 @@ object Server extends App with ComponentRegistry {
       );
       """.execute().apply()
   }
-
 }
